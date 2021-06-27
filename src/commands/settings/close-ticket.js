@@ -40,9 +40,6 @@ class CloseTicketCommand extends BaseCommand {
           ticket.close('The moderator has closed your ticket.', true, message.guild.primaryColor)
         }
       }
-    } else if (message.guild.ticketsCategory && message.channel.parentID === message.guild.ticketsCategoryId &&
-      message.channel.id !== message.guild.ratingsChannelId) {
-      message.channel.delete()
     }
   }
 }
